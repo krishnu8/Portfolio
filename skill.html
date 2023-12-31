@@ -1,0 +1,314 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Skill</title>
+    <link rel="stylesheet" href="style.css">
+    <link rel="stylesheet" href="progressbar.css">
+    <script src="https://cdn.jsdelivr.net/npm/typed.js@2.0.12"></script>
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.6.0/jquery.min.js"></script>
+
+
+</head>
+<style type="text/css">
+    /* .progress{
+        background-color: gray;
+        width: 100%;
+        display: flex;
+        flex-direction: row;
+        justify-content: space-evenly;
+    } */
+    .jack {
+        width: 100%;
+        margin-top: 70px;
+        display: flex;
+        flex-direction: row;
+        justify-content: space-evenly;
+    }
+
+    .oggy {
+        width: 100%;
+        margin-top: 70px;
+        display: flex;
+        flex-direction: row;
+        justify-content: space-evenly;
+    }
+
+    .a1 {
+        width: 25%;
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        background-color: #191919a9;
+        color: white;
+        padding: 20px;
+        border-radius: 15px;
+        /* padding-top: 20px;
+        padding-bottom: 20px; */
+    }
+
+    .a2 {
+        width: 25%;
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        background-color: #191919a9;
+        color: white;
+        padding: 20px;
+        border-radius: 15px;
+
+    }
+
+    .a3 {
+        width: 25%;
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        background-color: #191919a9;
+        color: white;
+        padding: 20px;
+        border-radius: 15px;
+
+    }
+
+    .img img {
+        height: 120px;
+        width: 120px;
+    }
+
+    .text {
+        line-height: 30px;
+        text-align: justify;
+        font-size: 20px;
+        padding-top: 50px;
+        color: aliceblue;
+    }
+
+    .my {
+        display: flex;
+        align-items: center;
+        flex-direction: column;
+        font-size: 40px;
+        margin-top: 30px;
+    }
+
+    .my::after {
+        content: '';
+        height: 3px;
+        width: 150px;
+        background-color: rgba(36, 222, 19, 0.921);
+        display: block;
+    }
+
+    button {
+        background-color: #f9004d;
+        color: rgb(10, 10, 10);
+        text-decoration: none;
+        border: 2px solid transparent;
+        font-weight: bold;
+        margin-top: 40px;
+        padding: 13px 30px;
+        border-radius: 30px;
+        transition: .4s;
+    }
+
+    button:hover {
+        background-color: transparent;
+        border: 2px solid #f9004d;
+        cursor: pointer;
+        color: black;
+    }
+
+    .darktheme .a1 {
+        background-color: rgba(255, 255, 255, 0.721);
+        color: black;
+    }
+
+    .darktheme .text {
+        color: black;
+    }
+
+    .darktheme .a2 {
+        background-color: rgba(255, 255, 255, 0.721);
+        color: black;
+    }
+
+    .darktheme .a3 {
+        background-color: rgba(255, 255, 255, 0.721);
+        color: black;
+    }
+
+    .darktheme .text {
+        color: white;
+    }
+
+    .darktheme {
+        background-color: #111110;
+    }
+
+    .contain {
+        display: none;
+    }
+
+    .second {
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        margin-top: 30px;
+        flex-direction: column;
+    }
+    .bttn {
+        margin-top: 0px;
+    }
+
+    .jack1 {
+        display: none;
+    }
+    @media only screen and (max-width:1000px)
+    {
+        .jack{
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            justify-content: center;
+            width: 80%;
+        }
+        .oggy{
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            width: 80%;
+            margin-top: 10px;
+            justify-content: center;
+        }
+        .a1{
+            width: 100%;
+            margin-top: 10px;
+            margin-left: 80px;
+        }
+        .a2{
+            width: 100%;
+            margin-top: 10px;
+            margin-left: 80px;
+        }
+        .a3{
+            width: 100%;
+            margin-top: 10px;
+            margin-left: 80px;
+        }
+    }
+</style>
+
+<body>
+    <div class="container">
+        <div class="po">
+            <p>Portfo
+            <p class="lio">lio</p>
+            </p>
+        </div>
+        <div class="sec"  id="sec3">
+            <div class="sec1"><a href="Home.html">Home</a></div>
+            <div class="sec1"><a href="service.html">Services</a></div>
+            <div class="sec1"><a href="skill.html">Skill</a></div>
+            <div class="sec1"><a href="contact.html">Contact</a></div>
+            <div class="sec1"><a href="about.html">About</a></div>
+            <div class="sec1"><a href="index.html">Log out</a></div>
+
+        </div>
+        <div id="ham" class="ham" onclick="onClickMenu()">
+            <div class="bar" id="bar1"></div>
+            <div class="bar" id="bar2"></div>
+            <div class="bar" id="bar3"></div>
+        </div>
+    </div>
+    <div class="dark-theme">
+        <img src="img/moon.png" id="icon">
+    </div>
+    <div class="my">
+        My Skills
+    </div>
+    <div class="contain" id="cont">
+        <div class="jack">
+            <div class="a1">
+                <div class="img"><img src="img/c.png"></div>
+                <div class="text">C is a general-purpose programming language created by Dennis Ritchie at the Bell
+                    Laboratories in 1972. It is a very popular language, despite being old. C is strongly associated
+                    with
+                    UNIX, as it was developed to write the UNIX operating system.
+                </div>
+                <a href="https://en.wikipedia.org/wiki/C_(programming_language)"><button type="button">Click Me</button></a>
+            </div>
+            <div class="a2">
+                <div class="img"><img src="img/c++.png"></div>
+                <div class="text">C++ is a cross-platform language that can be used to create high-performance
+                    applications. C++ was developed by Bjarne Stroustrup, as an extension to the C language. C++ gives
+                    programmers a high level of control over system resources and memory.
+                </div>
+                <a href="https://en.wikipedia.org/wiki/C%2B%2B"><button type="button">Click Me</button></a>
+           </div>
+            <div class="a3">
+                <div class="img"><img src="img/html.png"></div>
+                <div class="text">The HyperText Markup Language or HTML is the standard markup language for documents
+                    designed to be displayed in a web browser. It can be assisted by technologies such as Cascading
+                    Style Sheets (CSS) and scripting languages such as JavaScript. Open format?
+                </div>
+                <a href="https://en.wikipedia.org/wiki/HTML"><button type="button">Click Me</button></a>
+           </div>
+        </div>
+        <div class="oggy">
+            <div class="a1">
+                <div class="img"><img src="img/js.png"></div>
+                <div class="text">JavaScript is a dynamic computer programming language. It is lightweight and most
+                    commonly used as a part of web pages, whose implementations allow client-side script to interact
+                    with the user and make dynamic pages. It is an interpreted programming language with object-oriented
+                    capabilities.
+                </div>
+                <a href="https://en.wikipedia.org/wiki/JS"><button type="button">Click Me</button></a>
+            </div>
+            <div class="a2">
+                <div class="img"><img src="img/css.png"></div>
+                <div class="text">Cascading Style Sheets (CSS) is a stylesheet language used to describe the
+                    presentation of a document written in HTML or XML (including XML dialects such as SVG, MathML or
+                    XHTML). CSS describes how elements should be rendered on screen, on paper, in speech, or on other
+                    media
+                </div>
+                <a href="https://en.wikipedia.org/wiki/CSS"><button type="button">Click Me</button></a>
+            </div>
+            <div class="a3">
+                <div class="img"><img src="img/python.png"></div>
+                <div class="text">Python is a computer programming language often used to build websites and software,
+                    automate tasks, and conduct data analysis. Python is a general-purpose language, meaning it can be
+                    used to create a variety of different programs and isn't specialized for any specific problems.
+                </div>
+                <a href="https://en.wikipedia.org/wiki/Python"><button type="button">Click Me</button></a>
+            </div>
+        </div>
+    </div>
+    <div class="second" id="seccc">
+        <div class="container1">
+            <div class="circular-progress">
+                <span class="progress-value">0%</span>
+            </div>
+            <span class="text">Quality of Website</span>
+        </div>
+    </div>
+    <br>
+    <center> <button id="but" class="bttn" onclick="f1()">View Skill</button></center>
+</body>
+<script src="script.js"></script>
+<script src="progressbar.js"></script>
+<script>
+    $(document).ready(function () {
+        $(".bttn").click(function () {
+            $("#cont").slideToggle(2500);
+        });
+    });
+    function f1() {
+        document.getElementById("seccc").classList.toggle("jack1");
+    }
+</script>
+
+</html>

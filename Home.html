@@ -1,0 +1,227 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Home</title>
+    <script src="https://cdn.jsdelivr.net/npm/typed.js@2.0.12"></script>
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.6.0/jquery.min.js"></script>
+
+    <link rel="stylesheet" href="style.css">
+    <style type="text/css">
+        .divide {
+
+            width: 100%;
+            height: 550px;
+            display: flex;
+            flex-direction: row;
+            margin-top: 60px;
+            /* background-color: blue; */
+            justify-content: space-evenly;
+            /* background-color: black; */
+        }
+
+        .intro {
+            /* width: 100%; */
+            flex-basis: 40%;
+            /* margin-top: 100px; */
+            padding-top: 100px;
+            /* background-color: brown; */
+        }
+
+        .photo {
+            /* width: 100%; */
+            flex-basis: 50%;
+            /* background-color: aqua; */
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            /* height: 600px; */
+
+        }
+
+        .hlo {
+            padding-left: 30%;
+            font-size: 20px;
+            padding-bottom: 15px;
+        }
+
+        .name {
+            display: flex;
+            flex-direction: row;
+            font-size: 50px;
+            font-family: sans-serif;
+        }
+
+        .krishnu {
+            padding-left: 32%;
+        }
+
+        .gupta {
+            padding-left: 7px;
+            color: red;
+        }
+
+        .info {
+            padding-left: 30%;
+            font-size: 35px;
+            padding-top: 10px;
+            margin-bottom: 75px;
+            /* color: red; */
+        }
+
+        .write {
+            padding-left: 15px;
+        }
+
+        .p1 {
+            /* background-color: green; */
+            height: 100%;
+            width: 100%;
+            background-image: url(img/j.png);
+            background-repeat: no-repeat;
+            background-size: cover;
+            transition: 1s;
+        }
+
+        .divide .photo .p1 .p2 {
+            background-image: url(img/man.png);
+            height: 106.5%;
+            background-repeat: no-repeat;
+            background-size: cover;
+            /* background-position: center; */
+            transition: 1s;
+            background-color: rgba(14, 13, 13, 0);
+            /* z-index: 1; */
+        }
+
+        .p1:hover {
+            margin-top: -50px;
+        }
+
+        .p2:hover {
+            margin-top: 25px;
+            margin-right: 60px;
+        }
+
+        .divide .intro a {
+            /* height: 25px;
+            width: 75px; */
+            background-color: rgb(255, 0, 132);
+            text-decoration: none;
+            margin-left: 220px;
+            font-size: 20px;
+            padding: 10px;
+            color: white;
+
+        }
+
+        .info .write {
+            color: red;
+        }
+
+        .darktheme {
+            /* position: relative; */
+            background-color: black;
+            color: white;
+        }
+
+        .darktheme a {
+            position: relative;
+            background-color: black;
+            color: white;
+        }
+
+        .dark-theme img {
+            /* height: 40px; */
+            padding-left: 30px;
+            position: fixed;
+            cursor: pointer;
+        }
+        @media only screen and (max-width:1000px) {
+            body {
+                background-image: url(img/wall.jpg);
+            }
+
+            .divide {
+                display: flex;
+                flex-direction: column-reverse;
+                /* height: 100vh; */
+                width: 100%;
+                margin-top: 110px;
+
+            }
+
+            .photo {
+                display: none;
+            }
+
+            .intro {
+                margin-top: -80%;
+                display: flex;
+                flex-direction: column;
+                justify-content: center;
+                /* align-items: center; */
+                width: 100%;
+
+            }
+
+            .intro a {
+                width: 150px;
+
+            }
+
+            .darktheme {
+                background-image: none;
+            }
+        }
+    </style>
+</head>
+
+<body>
+    <div class="container">
+        <div class="po">
+            <p>Portfo
+            <p class="lio">lio</p>
+            </p>
+        </div>
+        <div class="sec" id="sec3">
+            <div class="sec1"><a href="Home.html">Home</a></div>
+            <div class="sec1"><a href="service.html">Services</a></div>
+            <div class="sec1"><a href="skill.html">Skill</a></div>
+            <div class="sec1"><a href="contact.html">Contact</a></div>
+            <div class="sec1"><a href="about.html">About Us</a></div>
+            <div class="sec1"><a href="index.html">Log out</a></div>
+
+        </div>
+        <div id="ham" class="ham" onclick="onClickMenu()">
+            <div class="bar" id="bar1"></div>
+            <div class="bar" id="bar2"></div>
+            <div class="bar" id="bar3"></div>
+        </div>
+    </div>
+    <div class="dark-theme">
+        <img src="img/moon.png" id="icon">
+    </div>
+    <div class="divide">
+        <div class="intro">
+            <div class="hlo">Hello,my name is</div>
+            <div class="name">
+                <div class="krishnu">Krishnu</div>
+                <div class="gupta">Gupta</div>
+            </div>
+            <div class="info"><span class="read">I'm a</span><span class="write"></span></div>
+            <a href="https://drive.google.com/file/d/13TaV51r0930KdSG_0nkgSdOHhqYl6x2k/view?usp=share_link" target="_blank">Download CV</a>
+        </div>
+        <div class="photo">
+            <div class="p1">
+                <div class="p2"></div>
+            </div>
+        </div>
+    </div>
+</body>
+<script src="script.js"></script>
+
+</html>

@@ -1,0 +1,186 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>About</title>
+    <link rel="stylesheet" href="style.css">
+<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.6.0/jquery.min.js"></script>
+
+    <style type="text/css">
+        .all {
+            display: flex;
+            flex-direction: row;
+            width: 100%;
+            padding-top: 50px;
+            justify-content: space-evenly;
+        }
+
+        .photo {
+            height: 600px;
+            flex-basis: 30%;
+            margin-left: 5%;
+            /* background-color:aqua; */
+        }
+
+        .photo img {
+            position: relative;
+            height: 600px;
+            z-index: -1;
+
+        }
+
+        .text {
+            /* background-color: rgba(135, 91, 91, 0.477); */
+            width:800px;
+            flex-basis: 65%;
+            height: 600px;
+        }
+
+        .text h1 {
+            /* padding-left: 35%; */
+            padding-top: 30px;
+            font-size: 50px;
+        }
+
+        .text h2 {
+            font-size: 35px;
+            padding-top: 10px;
+            /* padding-left: 30%; */
+        }
+
+        h2 span {
+            color: red;
+        }
+
+        .text p {
+            padding-top: 30px;
+            font-size: 30px;
+            flex-wrap: wrap;
+            text-align: justify;
+            line-height: 40px;
+
+        }
+        button {
+            background-color: #f9004d;
+            color: rgb(10, 10, 10);
+            text-decoration: none;
+            border: 2px solid transparent;
+            font-weight: bold;
+            margin-top: 80px;
+            margin-left: 30%;
+            padding: 13px 30px;
+            border-radius: 30px;
+            transition: .4s;
+        }
+
+        button:hover {
+            background-color: transparent;
+            border: 2px solid #f9004d;
+            cursor: pointer;
+        }
+
+        .last {
+            display: flex;
+            justify-content: center;
+            font-size: 30px;
+            background-color: gray;
+            color: white;
+        }
+
+        .darktheme button {
+            color: white;
+        }
+        .darktheme button{
+            background-color: rgba(0, 0, 255, 0.759);
+        }
+        @media only screen and (max-width:1000px)
+        {
+            body{
+                width: 100%;
+                height: 100vh;
+            }
+            .all{
+                display: flex;
+                flex-direction: column;
+                width: 100%;
+            }
+            .photo{
+                z-index: -1;
+                background-image: url(img/wall.jpg);
+                width: 100%;
+                margin-left:6px;
+            }
+            .text{
+                margin-top: -5%;
+                height: auto;
+                width: 100%;
+            }
+            .text p{
+                width: 100%;
+                text-align: center;
+                word-wrap: break-word;
+            }
+            .all a{
+                padding-left: 40px;
+            }
+            .last{
+                width: 100%;
+                text-align: center;
+                margin-left: 10px;
+                margin-top: 30px;
+                border-radius: 10px;
+            }
+        }
+    </style>
+</head>
+
+<body>
+    <div class="container">
+        <div class="po">
+            <p>Portfo
+            <p class="lio">lio</p>
+            </p>
+        </div>
+        <div class="sec"  id="sec3">
+            <div class="sec1"><a href="Home.html">Home</a></div>
+            <div class="sec1"><a href="service.html">Services</a></div>
+            <div class="sec1"><a href="skill.html">Skill</a></div>
+            <div class="sec1"><a href="contact.html">Contact</a></div>
+            <div class="sec1"><a href="about.html">About Us</a></div>
+            <div class="sec1"><a href="index.html">Log out</a></div>
+        </div>
+        <div id="ham" class="ham" onclick="onClickMenu()">
+            <div class="bar" id="bar1"></div>
+            <div class="bar" id="bar2"></div>
+            <div class="bar" id="bar3"></div>
+        </div>
+    </div>
+    <div class="dark-theme">
+        <img src="img/moon.png" id="icon">
+    </div>
+    <div class="all">
+        <div class="photo">
+            <img src="img/about1.png">
+        </div>
+        <div class="text">
+            <h1>About Me</h1>
+            <h2>Developer <span>& Designer</span></h2>
+            <p>I am krishnu an web developer. Basically i am a student and i can design beutiful website with clean code
+                and pixel perfect design.I can provide clean code and pixel perfect design. I
+                also make the website more & more interactive with web animations.A responsive design makes your website
+                accessible to all users, regardless of their device.
+            </p>
+
+            <a href="contact.html"><button type="button">Let's Talk</button></a>
+        </div>
+    </div>
+    <div class="last">
+        let me make a beutiful website for you!
+    </div>
+</body>
+<script src="script.js"></script>
+
+</html>

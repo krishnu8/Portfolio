@@ -1,0 +1,195 @@
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Sign In</title>
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.6.0/jquery.min.js"></script>
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+
+    <style type="text/css">
+        body {
+            background: linear-gradient(to right, #ffa600, #5e1a80cc, #f61288);
+            font-family: 'Poppins', sans-serif;
+            /* background-image: url(img/background1.png); */
+            background-repeat: no-repeat;
+            background-size: cover;
+            display: flex;
+            flex-direction: column;
+            justify-content: center;
+            align-items: center;
+        }
+
+        .container {
+            width: 375px;
+            /* height: 100%; */
+            /* background: linear-gradient(to right, #e89a09, #8a18c3, #bc1f70); */
+            background-color: rgba(245, 245, 245, 0.553);
+
+            border-radius: 10px;
+            margin-top: 110px;
+            height: 500px;
+        }
+
+        label {
+            font-size: 15px;
+            font-family: 'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif
+        }
+
+        #form {
+            width: 300px;
+            margin: 20vh auto 0 auto;
+            margin-top: 10px;
+            border-radius: 10px;
+            font-size: 12px;
+            height: 425px;
+        }
+
+        form h1 {
+            font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+            font-size: 20px;
+        }
+
+        #form h1 {
+            color: #0f2027;
+            text-align: center;
+            font-size: 25px;
+            font-family: 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
+        }
+
+        #sign {
+            padding: 10px;
+            margin-top: 60px;
+            width: 60%;
+            color: white;
+            background-color: rgb(41, 57, 194);
+            border: none;
+            border-radius: 15px;
+            display: flex;
+            justify-content: center;
+            margin-left: 20%;
+        }
+
+        a {
+            text-decoration: none;
+        }
+
+        #create {
+            padding: 10px;
+            color: white;
+            background-color: rgb(41, 57, 194);
+            border: none;
+            border-radius: 15px;
+            display: flex;
+            justify-content: center;
+            margin-left: 37%;
+            margin-top: -50px;
+        }
+
+        #form #sign:hover {
+            background-color: red;
+        }
+
+        #create:hover {
+            background-color: rgb(234, 0, 255);
+        }
+
+        .input-control {
+            display: flex;
+            flex-direction: column;
+            padding-top: 20px;
+        }
+
+        .input-control1 {
+            display: flex;
+            flex-direction: column;
+            padding-top: 20px;
+            margin-top: 0px;
+        }
+
+        .input-control1 input {
+            border: 2px solid #f88585;
+            border-radius: 4px;
+            display: block;
+            font-size: 12px;
+            padding: 10px;
+            width: 100%;
+        }
+
+        .input-control input {
+            border: 2px solid #f88585;
+            border-radius: 4px;
+            display: block;
+            font-size: 12px;
+            padding: 10px;
+            width: 100%;
+        }
+
+        .input-control input:focus {
+            outline: 2;
+        }
+
+        .have {
+            margin-top: 25px;
+            font-size: 15px;
+            text-align: center;
+        }
+
+        label {
+            font-size: 20px;
+            /* text-align: center; */
+        }
+    </style>
+</head>
+
+<body>
+    <div class="container">
+        <form id="form" action="Home.html" onsubmit="return validation()">
+            <h1>Sign In</h1>
+            <div class="input-control">
+                <label for="email">Email</label>
+                <input id="email" name="email" type="email">
+                <div id="emailerror"></div>
+            </div>
+            <div class="input-control1">
+                <label for="password">Password</label>
+                <input id="password" name="password" type="password">
+                <div id="passworderror"></div>
+            </div>
+            <button type="submit" id="sign">Sign In</button>
+            <div class="have">Don't have an Account</div>
+        </form>
+        <a href="Registration.html"><button id="create">Create Account</button></a>
+    </div>
+</body>
+<script>
+    function validation() {
+        var email = document.getElementById('email').value;
+        var password = document.getElementById('password').value;
+
+        var emailcheck = /^(([^<>()[\]\\.,;:\s@"]+(\.[^<>()[\]\\.,;:\s@"]+)*)|(".+"))@((\[[0-9]{1,3}\.[0-9]{1,3}\.[0-9]{1,3}\.[0-9]{1,3}\])|(([a-zA-Z\-0-9]+\.)+[a-zA-Z]{2,}))$/;
+        var passwordcheck = /^(?=.*\d)(?=.*[#$@!%&*?])[A-Za-z\d#$@!%&*?]{8,}$/
+
+        if (emailcheck.test(email)) {
+            document.getElementById('emailerror').innerHTML = "";
+        }
+        else {
+            document.getElementById('emailerror').innerHTML = "**Invalid Email";
+            return false;
+        }
+
+
+        if (passwordcheck.test(password)) {
+            document.getElementById('passworderror').innerHTML = "";
+        }
+        else {
+            document.getElementById('passworderror').innerHTML = "**more than 8 character atleast 1 number,symbol and character";
+            return false;
+        }
+
+    }
+</script>
+
+</html>

@@ -1,0 +1,274 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Contact</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.6.0/jquery.min.js"></script>
+<style type="text/css">
+    .contact {
+        margin-top: 20px;
+        padding-left: 50%;
+        font-size: 35px;
+        font-weight: bolder;
+        font-family:sans-serif;
+    }
+
+    .temp {
+        /* background-color: aqua; */
+        /* height: 150px; */
+        width: 100%;
+        display: flex;
+        flex-direction: row;
+        margin-top: 10px;
+        height: 600px;
+        width: 100%;
+    }
+
+    .photo {
+        height: 600px;
+        /* background-color: aquamarine; */
+        flex-basis: 48%;
+    }
+
+    .photo img {
+        height: 600px;
+    }
+
+    .text {
+        text-align: center;
+        font-size: 35px;
+        /* background-color: violet; */
+        display: flex;
+        flex-direction: column;
+        padding-top: 130px;
+        /* justify-content: center; */
+        flex-basis: 48%;
+        /* align-self: center; */
+    }
+
+    .text .chat {
+        margin-bottom: 20px;
+    }
+
+    .text .btn {
+        margin-top: 50px;
+    }
+
+    .btn button {
+        background-color: #f9004d;
+        color: rgb(10, 10, 10);
+        text-decoration: none;
+        border: 2px solid transparent;
+        height: 50px;
+        width: 120px;
+        font-size: 30px;
+        border-radius: 30px;
+        transition: .4s;
+    }
+
+    .btn button:hover {
+        background-color: transparent;
+        border: 2px solid #f9004d;
+        cursor: pointer;
+    }
+
+    .form {
+        text-align: center;
+        font-size: 35px;
+        /* background-color: violet; */
+        display: flex;
+        flex-direction: column;
+        padding-top: 50px;
+        /* justify-content: center; */
+        flex-basis: 48%;
+        /* align-self: center; */
+        display: none;
+    }
+
+    nav {
+        margin-bottom: 40px;
+    }
+
+    .form input {
+        width: 50%;
+        height: 30px;
+        text-align: center;
+        border-radius: 15px;
+    }
+
+    .form textarea {
+        margin-top: 15px;
+    }
+
+    .jack {
+        display: none;
+    }
+
+    .darktheme .photo img {
+        display: none;
+    }
+
+    .darktheme .photo {
+        background-image: url(img/dark3.jpg);
+        background-repeat: no-repeat;
+        background-size: cover;
+    }
+
+    .darktheme {
+        background-color: black;
+    }
+
+    .darktheme .sec1 a {
+        background-color: black;
+    }
+
+    @media only screen and (max-width:1000px) {
+        .temp {
+            display: flex;
+            flex-direction: column;
+            height: 500px;
+            width: 100%;
+        }
+
+        .photo {
+            display: none;
+        }
+
+        .contact {
+            margin-top: 0px;
+            padding-left: 0%;
+            text-align: center;
+        }
+    }
+
+    .sn {
+        width: 5px;
+        font-size: 15px;
+        display: none;
+    }
+</style>
+
+<body>
+    <div class="container">
+        <div class="po">
+            <p>Portfo
+            <p class="lio">lio</p>
+            </p>
+        </div>
+        <div class="sec" id="sec3">
+            <div class="sec1"><a href="Home.html">Home</a></div>
+            <div class="sec1"><a href="service.html">Services</a></div>
+            <div class="sec1"><a href="skill.html">Skill</a></div>
+            <div class="sec1"><a href="contact.html">Contact</a></div>
+            <div class="sec1"><a href="about.html">About Us</a></div>
+            <div class="sec1"><a href="index.html">Log out</a></div>
+
+        </div>
+        <div id="ham" class="ham" onclick="onClickMenu()">
+            <div class="bar" id="bar1"></div>
+            <div class="bar" id="bar2"></div>
+            <div class="bar" id="bar3"></div>
+        </div>
+    </div>
+    <div class="dark-theme">
+        <img src="img/moon.png" id="icon">
+    </div>
+    <div class="contact">Contact Us</div>
+    <div class="temp">
+        <div class="photo"><img src="img/co1.png" alt=""></div>
+        <div class="text" id="text1">
+            <div class="chat">
+                Let's chat. <br>
+                Tell me about your project.
+            </div>
+            <div class="btn">
+                <button type="button" id="chat" class="chat" onclick="f1()">CHAT</button>
+            </div>
+        </div>
+        <div class="form" id="form">
+            <nav>Feel free to ask anything!</nav>
+            <form action="" onsubmit="return validation()">
+                <input type="text" placeholder="First Name" id="fname">
+                <span style="font-size: 15px;" id="ferror"></span><br>
+                <input type="text" placeholder="Last Name" id="Lname">
+                <span style="font-size: 15px;" id="lerror"></span><br>
+                <input type="email" placeholder="Email" id="Email">
+                <span style="font-size: 15px;" id="emailerror"></span><br>
+                <input type="number" placeholder="Phone" id="number" maxlength="10">
+                <span style="font-size: 15px;" id="phonelerror"></span><br>
+                <textarea name="" placeholder="Enter Your Message" cols="20" rows="5" style="width: 95%;"></textarea>
+                <input type="submit" value="Submit" style="width:20%; height: 8%; font-size: 20px;">
+            </form>
+        </div>
+    </div>
+</body>
+<script src="script.js"></script>
+<script>
+    $(document).ready(function () {
+        $(".text").click(function () {
+            $("#form").slideToggle(2000);
+        });
+    });
+    function f1() {
+        document.getElementById("text1").classList.toggle("jack");
+    }
+</script>
+<script>
+    function validation() {
+        var fname = document.getElementById('fname').value;
+        var Lname = document.getElementById('Lname').value;
+        var Email = document.getElementById('Email').value;
+        var number = document.getElementById('number').value;
+
+        var firstcheck = /^[A-Za-z. ]{5,20}$/;
+        var lastcheck = /^[A-Za-z. ]{5,20}$/;
+        // var emailcheck = /^[A-Za-z_]{3,}@[A-za-z]{3,}[.]{1}[A-Za-z.]{2,6}$/;
+        // var emailcheck = /^[a-zA-Z0-9+_.-]+@[a-zA-Z0-9.-]+\.[a-zA-z]{2,3}$/;
+        var emailcheck =  /^(([^<>()[\]\\.,;:\s@"]+(\.[^<>()[\]\\.,;:\s@"]+)*)|(".+"))@((\[[0-9]{1,3}\.[0-9]{1,3}\.[0-9]{1,3}\.[0-9]{1,3}\])|(([a-zA-Z\-0-9]+\.)+[a-zA-Z]{2,}))$/;
+        var numbercheck =/^[789][0-9]{9}$/;
+
+        if (firstcheck.test(fname)) {
+            document.getElementById('ferror').innerHTML = "";
+        }
+        else {
+            document.getElementById('ferror').innerHTML = "**Invalid First Name";
+            return false;
+        }
+        if (lastcheck.test(Lname)) {
+            document.getElementById('lerror').innerHTML = "";
+        }
+        else {
+            document.getElementById('lerror').innerHTML = "**Invalid Last Name";
+            return false;
+        }
+        if (emailcheck.test(Email)) {
+            document.getElementById('emailerror').innerHTML = "";
+        }
+        else {
+            document.getElementById('emailerror').innerHTML = "**Invalid Email";
+            return false;
+        }
+
+        if (numbercheck.test(number)) {
+            document.getElementById('phonelerror').innerHTML = "";
+        }
+        else {
+            document.getElementById('phonelerror').innerHTML = "**Invalid Number";
+            return false;
+        }
+
+    }
+</script>
+<script>
+    document.querySelectorAll('input[type="number"]').forEach(input =>{
+    input.oninput = () =>{
+        if(input.value.length > input.maxLength) input.value = input.value.slice(0,input.maxLength);
+    };
+});
+</script>
+</html>
